@@ -32,10 +32,36 @@ body{
 }
     
 .navegacion-principal {
-    
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
 }
 
-.navegacion-principal a {
-    background-color: var(--primario);  
-    display: inline-block;
+.navegacion-principal a {  
+    color: var(--blanco);
+    text-decoration: none; 
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro)
+}
+
+.navegacion-principal a:focus {
+    color: red;
+}
+
+@media (min-width: 480px ){
+    body {
+        background-color: blue;
+    }
+}
+
+@media (min-width: 768px){
+    body{
+        background-color: cornflowerblue;
+    }
 }
