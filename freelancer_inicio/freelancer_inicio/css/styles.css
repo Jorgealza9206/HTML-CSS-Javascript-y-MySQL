@@ -8,14 +8,26 @@
 
 html{
     font-size: 62.5%;
+    box-sizing: border-box
 }
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
 body{
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
-.titulo {
-    text-align: center;
+h1 {
     font-size: 3.8rem;
+}
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,h2,h3 {
+    text-align: center;
 }
 
 .titulo span {
@@ -23,8 +35,20 @@ body{
 } 
 
 .contenedor{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
+}
+
+.boton{
+    background-color: var(--secunadario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
 }
 
 .nav-bg {
@@ -33,8 +57,16 @@ body{
     
 .navegacion-principal {
     display: flex;
-    flex-direction:row;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .navegacion-principal a {  
@@ -54,14 +86,27 @@ body{
     color: red;
 }
 
-@media (min-width: 480px ){
-    body {
-        background-color: blue;
-    }
+.hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
 }
 
-@media (min-width: 768px){
-    body{
-        background-color: cornflowerblue;
-    }
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p{
+    color: var(--blanco);
 }
