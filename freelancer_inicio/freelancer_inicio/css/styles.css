@@ -10,7 +10,8 @@
 /*Globales*/
 html{
     font-size: 62.5%;
-    box-sizing: border-box  /* Hack para box model*/
+    box-sizing: border-box;  /* Hack para box model*/
+    scroll-snap-type: y mandatory;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -160,6 +161,12 @@ h1,h2,h3 {
 .contenido-hero h2,
 .contenido-hero p{
     color: var(--blanco);
+}
+
+.servicios,
+.navegacion-principal {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 /**servicios**/
