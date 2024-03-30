@@ -164,7 +164,8 @@ h1,h2,h3 {
 }
 
 .servicios,
-.navegacion-principal {
+.navegacion-principal,
+.formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
 }
