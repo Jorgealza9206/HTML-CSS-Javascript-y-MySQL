@@ -39,3 +39,9 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .tres-columnas {
+        display: flex;
+        gap: 2rem;
+    }/* Ya soportado por Safari, no ponemos flex en entrada-blog */
+}
