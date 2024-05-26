@@ -1,11 +1,12 @@
 :root {
     --fuenteHeading: 'PT-Sans', sans-serif;
-    --fuenteParrafos: 'Open Sans', sans-serif:var(--fuenteHeading)
+    --fuenteParrafos: 'Open Sans', sans-serif;
 
-    --primario: #784d3c;
+    --primario: #784D3C;
     --gris: #e1e1e1;
     --blanco: #ffffff;
     --negro: #000000;
+}
 
 html {
     box-sizing: border-box;
@@ -149,6 +150,44 @@ img {
     font-weight: 700;
     margin-bottom: 2rem;
 }
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+    }
+}
 .boton--primario {
     background-color: var(--negro);
+}
+
+.boton--secundario {
+    background-color: var(--primario);
+}
+
+.cursos {
+    list-style: none;
+}
+
+.widget-curso {
+    border-bottom: 1px solid var(--gris);
+    margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type {
+    border: none;
+    margin: 0%;
+}
+
+.widget-curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.widget-curso__info {
+    font-weight: 400;
+}
+
+.widget-curso__label,
+.widget-curso__info {
+    font-size: 2rem;
 }
