@@ -20,7 +20,7 @@ html {
 body {
     font-family: var(--fuenteParrafos);
     font-size: 1.6rem;
-    line-height: 2;
+    line-height: 1.2; /* Interlineado*/
 }
 
 /** Globales **/
@@ -85,6 +85,10 @@ img {
     text-align: center;
     color: var(--blanco);
     margin-top: 5rem;
+}
+
+.barra {
+    padding-top: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -190,4 +194,79 @@ img {
 .widget-curso__label,
 .widget-curso__info {
     font-size: 2rem;
+}
+
+.footer {
+    display: flex;
+    background-color: var(--negro);
+    height: 15rem;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .footer_barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+/** Sobre Nosotros **/
+
+@media (min-width: 768px) {
+    .sobre-nosotros {
+        display: flex;
+        column-gap: 2rem;
+    }
+    .sobre-nosotros__imagen {
+        flex-basis: 50%;
+    }
+    .sobre-nosotros__texto {
+        flex-basis: 50%;
+        text-align: justify;
+    }
+}
+
+/**Cursos**/
+
+.curso {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+    .curso {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.curso:last-of-type {
+    border: none;
+}
+
+.curso__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+.curso__info {
+    font-weight: 400; 
+}
+
+.curso__label,
+.curso__info {
+    font-size: 2rem;
+}
+
+/**Contacto**/
+
+.contacto-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
