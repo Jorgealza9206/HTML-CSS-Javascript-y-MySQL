@@ -30,18 +30,18 @@ const carrito = [
 // forEach
 meses.forEach(mes => {
     if(mes = 'Marzo'){
-        console.log(mes);
+        console.log('Marzo si existe');
     }
     
 });
+
+let resultado;
 
 //Some ideal para arreglo de objetos
 // const resultado2 = carrito.some(function(producto){
 //     return producto.nombre === 'Celular'
 // });
-const resultado = carrito.some(producto => producto.nombre === 'Celular PRO');
-
-console.log(resultado);
+resultado = carrito.some(producto => producto.nombre === 'Celular PRO');
 
 //Reduce
 // resultado = carrito.reduce(function(total, producto){
@@ -50,7 +50,11 @@ console.log(resultado);
 
 resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
 
+resultado = carrito.filter(producto => producto.precio > 400);
+
+
+
 //Filter
-resultado = carrito.filter(function(producto){
-    return producto.nombre !== 'Celular'
-});
+resultado = carrito.filter(producto => producto.nombre !== 'Celular');
+
+console.log(resultado);
