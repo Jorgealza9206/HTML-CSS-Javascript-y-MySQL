@@ -14,16 +14,21 @@ class Producto {
 const producto2 = new Producto("Monitor curvo de 49\"",800);
 const producto3 = new Producto("Laptop", 300);
 
-class Libro {
+//Herencia
+
+class Libro extends Producto {
     constructor(nombre, precio, isdn) {
-        this.nombre = nombre;
-        this.precio = precio;
+        super(nombre,precio);
         this.isdn = isdn;
     }
+
+    formatearProducto() {
+        return  `${super.formatearProducto()} y su ISDN es ${this.isdn}`;
+    }
+
 }
 
 const libro = new Libro('Javascript La Revolución', 120, '918223546869913');
-console.log(libro);
-
-console.log(producto2);
-console.log(producto3);
+console.log(libro.formatearProducto());
+console.log(libro.obtenerPrecio());
+console.log(producto2.formatearProducto());
