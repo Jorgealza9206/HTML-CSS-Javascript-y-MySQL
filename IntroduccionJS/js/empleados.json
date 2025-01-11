@@ -9,12 +9,12 @@
             "id" : 2,
             "nombre": "Jorge",
             "puesto": "Técnico Informático"
-        }
+        },
         {
             "id" : 3,
             "nombre": "Camila",
             "puesto": "Especialista en Ingeniería de Datos"
-        }
+        },
         {
             "id" : 4,
             "nombre": "Ashley",
