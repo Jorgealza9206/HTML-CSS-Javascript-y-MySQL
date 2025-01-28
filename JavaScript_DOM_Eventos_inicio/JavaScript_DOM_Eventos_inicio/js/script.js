@@ -67,8 +67,25 @@ btnEnviar.addEventListener('click', function(evento) {
 
 // Evento de los inputs y textarea
 
-const nombre = document.querySelector('#nombre');
+const datos ={
+    nombre: '',
+    email: '',
+    mensaje: ''
+}
 
-nombre.addEventListener('input', function(e) {
-    console.log(e.target.value);
-});
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+
+nombre.addEventListener('input', leerTexto);
+
+email.addEventListener('input', leerTexto);
+
+mensaje.addEventListener('input', leerTexto);
+
+function leerTexto(e) {
+
+    datos[e.target.id] = e.target.value;
+
+    console.log(datos);
+}
