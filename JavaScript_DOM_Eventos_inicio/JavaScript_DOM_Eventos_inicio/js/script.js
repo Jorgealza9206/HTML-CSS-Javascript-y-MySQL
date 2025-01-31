@@ -56,14 +56,14 @@ window.onscroll = function() {
 }
 
 // Seleccionar elementos y asociarles un evento
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click', function(evento) {
-    console.log(evento);
-    evento.preventDefault(); // Evita la acción por defecto
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click', function(evento) {
+//     console.log(evento);
+//     evento.preventDefault(); // Evita la acción por defecto
 
-    //Validar un formulario
-    console.log('Enviando Formulario');
-});
+//     //Validar un formulario
+//     console.log('Enviando Formulario');
+// });
 
 // Evento de los inputs y textarea
 
@@ -76,16 +76,60 @@ const datos ={
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerTexto);
-
 email.addEventListener('input', leerTexto);
-
 mensaje.addEventListener('input', leerTexto);
+
+//El Evento de Submit
+formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    //Validar el formulario
+
+    const {nombre, email, mensaje} = datos;
+
+    if(nombre === '' || email === '' || mensaje === '') {
+        mostrarError('Todos los campos son obligatorios');
+        //console.log('Todos los campos son obligatorios');
+        return; //Corta la ejecución del código
+    }
+
+    //Enviar el formulario
+
+    mostrarCompletado();
+});
 
 function leerTexto(e) {
 
     datos[e.target.id] = e.target.value;
 
-    console.log(datos);
+    //console.log(datos);
+}
+
+//Muestra un error en pantalla
+function mostrarError(mensaje) {
+    const error = document.createElement('P'); //Crea un párrafo HTML
+    error.textContent = mensaje;
+    error.classList.add('error');
+
+    formulario.appendChild(error);
+
+    //Desaparezca después de 5 segundos
+    setTimeout(() => {
+        error.remove();
+    }, 5000);
+}
+
+function mostrarCompletado() {
+    const alerta = document.createElement('P'); //Crea un párrafo HTML
+    alerta.textContent = 'Enviado Correctamente';
+    alerta.classList.add('correcto');
+
+    formulario.appendChild(alerta);
+
+    //Desaparezca después de 5 segundos
+    setTimeout(() => {
+        alerta.remove();
+    }, 5000);
 }
