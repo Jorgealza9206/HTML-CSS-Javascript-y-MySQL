@@ -2,9 +2,11 @@
   "name": "festivalmusica",
   "version": "1.0.0",
   "description": "Aprendiendo SASS y NPM",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch src/scss:dist/css",
+    "dev": "gulp dev"
   },
   "keywords": [
     "SASS",
@@ -12,5 +14,10 @@
     "Gulp"
   ],
   "author": "Alexander Alza de @codigo con juan",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.0",
+    "sass": "^1.85.1"
+  }
 }
