@@ -1,18 +1,24 @@
 // Variables con let
 
-const producto = "Audifonos Gamer"; //Iniciar variable y asignarle valor
+const producto = 'Audifonos Gamer'; // Iniciar variable y asignarle valor
 
-const disponible = true; //Iniciamos la variable pero sin valor
+let disponible = true; // iniciamos la variable pero sin valor.
 
-producto = true; //Reasignando el valor de la variable
+// producto = true; // Reasignando el valor de la variable
+
+disponible = true;
 
 
-const producto1 = "Computadora",
+const producto1 = 'Computadora', 
     disponible1 = true,
-    categoria = "Computadoras";
+    categoria = 'Computadoras';
 
-//Estilos para las variables
-const nombre_producto = "Monitor HD";// underscore
-const nombreProducto = "Monitor HD" // Canelcase
-const NombreProducto = "Monitor HD" // Pascal Case
-const nombreproducto = "Monitor HD"
+
+// const 1disponible;
+const disponible_ = true;
+
+// Estilos para las variables
+const nombre_producto = 'Monitor HD'; // underscore
+const nombreProducto = 'Monitor HD'; // Camelcase
+const NombreProducto = 'Monitor HD'; // Pascal Case
+const nombreproducto = 'MonitorHD'; 

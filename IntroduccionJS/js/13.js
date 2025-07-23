@@ -1,19 +1,15 @@
-const carrito = [
-    { nombre: 'Monitor de 20 pulgadas', precio: 500},
-    { nombre: 'Television de 50 pulgadas', precio: 700},
-    { nombre: 'Tablet', precio: 300},
-    { nombre: 'Audífonos', precio: 200},
-    { nombre: 'Teclado', precio: 50},
-    { nombre: 'Celular', precio: 500},
-    { nombre: 'Bocinas', precio: 300},
-    { nombre: 'Laptop', precio: 800},
-];
+const producto = {
+    nombreProducto : "Monitor 20 Pulgadas",
+    precio: 300,
+    disponible: true
+}
 
-// ForEach
+const medidas = {
+    peso: '1kg',
+    medida: '1m'
+}
 
-carrito.forEach( producto => console.log(producto.nombre));
+const nuevoProducto = { ...producto, ...medidas };
 
-//map
-const arreglo2 = carrito.map( producto => `${producto.nombre} - ${producto.precio}`);
-
-console.log(arreglo2);
+console.log(producto);
+console.log(nuevoProducto);

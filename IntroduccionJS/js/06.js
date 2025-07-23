@@ -1,41 +1,16 @@
-// Arreglos o Arrays
+// Objeto Math
 
-const numeros = [10,20,30,40,50];
+let resultado;
 
-console.table(numeros);
+resultado = Math.PI;
+resultado = Math.round(2.5);
+resultado = Math.ceil(2.1); // Ceil siempre redondea hacia arriba
+resultado = Math.floor(2.9); // Floor siempre redondea hacia abajo
+resultado = Math.sqrt(144);
+resultado = Math.abs(-200);
+resultado = Math.min( 3, 5, 1, 8 , 2, 10 );
+resultado = Math.max( 3, 5, 1, 8 , 2, 10 );
+resultado = Math.random();
+resultado = Math.floor( Math.random() * 30 );
 
-const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
-
-console.table(meses);
-
-// const arreglo = ["Hola", 10, true, "si", null, {nombre: "Juan", trabajo:"Programador"}, [1,2,3]]
-
-// console.log(arreglo)
-
-//Acceder a los valores del arreglo
-
-// console.log(numeros[4]);
-// console.log(numeros[2]);
-
-//Conocer la extensión de un arreglo
-// console.log(meses.length)
-
-// meses.forEach( function(mes) {
-//     console.log(mes);
-// })
-
-numeros.push(60,70); //Al final del arreglo
-numeros.unshift(-10,-20,-30) //Al iniciod del arreglo
-
-console.table(numeros);
-
-// meses.pop(); //Elimina el ultimo elemento
-// meses.shift(); //Elimina el primer elemento
-
-meses.splice(2,1);
-console.table(meses);
-
-//Rest Operator o Spread Operator
-
-const nuevoArreglo = [...meses, 'Junio']
-console.log(nuevoArreglo)
+console.log(resultado);

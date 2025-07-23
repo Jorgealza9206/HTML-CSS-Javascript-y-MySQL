@@ -1,5 +1,19 @@
-const puntaje = 1000;
-
-if(puntaje == 1000){
-    console.log('Si el puntaje es 1000');
+// "use strict"; // Correr JS en modo estricto
+// Objetos
+const producto = {
+    nombreProducto : "Monitor 20 Pulgadas",
+    precio: 300,
+    disponible: true
 }
+
+Object.freeze(producto); // No se puede modificar el objeto
+
+producto.imagen = 'imagen.jpg'; // No se puede agregar una nueva propiedad
+
+// Object.seal(producto); // .freeze .seal
+
+// producto.precio = 'NUEVO PRECIO'; 
+
+// delete producto.precio;
+
+console.log(producto);

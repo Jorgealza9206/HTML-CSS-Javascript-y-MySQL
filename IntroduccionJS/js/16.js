@@ -1,12 +1,16 @@
-const numero1 = 20;
-const numero3 = 30;
 
-console.log(numero1);
-
-try {
-    console.log(numero2);
-} catch (error) {
-    console.log(error);
+// Declaración de Función
+sumar();
+function sumar() {
+    console.log(10 + 10);
 }
 
-console.log(numero3)
+
+
+// Expresión de la función
+sumar2();
+const sumar2 = function() {
+    console.log( 3 + 3);
+}
+
+

@@ -1,3 +1,18 @@
+
+// Arrow Functions
+
+const sumar2 = (n1, n2) => console.log( n1 + n2);
+sumar2(5, 10);
+
+
+const aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`)
+
+aprendiendo('JavaScript');
+
+
+
+
+
 // Array Methods
 
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
@@ -14,35 +29,24 @@ const carrito = [
 ];
 
 // forEach
-meses.forEach(function(mes) {
+meses.forEach( mes => {
     if(mes == 'Marzo') {
         console.log('Marzo si existe');
     }
 });
 
-// Includes
-let resultado = meses.includes('Diciembre');
+let resultado;
 
 // Some ideal para arreglo de objetos
-resultado = carrito.some(function(producto) {
-    return producto.nombre === 'Celular PRO'
-})
+resultado = carrito.some( producto => producto.nombre === 'Celular');
 
 // Reduce
-resultado = carrito.reduce(function(total, producto) {
-    return total + producto.precio
-}, 0);
-
+resultado = carrito.reduce( (total, producto) =>  total + producto.precio, 0);
 
 // Filter
-resultado = carrito.filter(function(producto) {
-    return producto.precio > 400
-});
-
-resultado = carrito.filter(function(producto) {
-    return producto.nombre !== 'Celular'
-});
-
-
+resultado = carrito.filter( producto => producto.precio > 400);
+resultado = carrito.filter( producto =>  producto.nombre !== 'Celular');
 
 console.log(resultado);
+
+

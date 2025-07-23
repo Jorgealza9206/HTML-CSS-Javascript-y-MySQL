@@ -1,45 +1,28 @@
-// Async / Await / Un async await hace que se ejecute todo el resto de código de la aplicación, mientras que
-// las funciones asíncronas tardan en ejecutarse
-// Async declara que una función sea asíncrona y el await espera que la función interna se ejecute para que cumpla la función
-// asíncrona
+// function sumar(n1, n2) {
+//     return n1 + n2;
+// }
 
-function descargarNuevosClientes() {
-    return new Promise( resolve => {
-        console.log('Descargando clientes... espere...');
+// const resultado = sumar(2, 3);
 
-        setTimeout( function() {
-            resolve('Los clientes fueron descargados');
-        },5000)
-    });
+// console.log(resultado);
+
+
+let total = 0;
+
+function agregarCarrito(precio) {
+    return total += precio;
 }
 
-function descargarUltimosPedidos() {
-    return new Promise( resolve => {
-        console.log('Descargando pedidos... espere...');
-
-        setTimeout( function() {
-            resolve('Los pedidos fueron descargados');
-        },3000)
-    });
+function calcularImpuesto(total) {
+    return 1.15 * total;
 }
 
-async function app() {
-    try{
-        // const clientes = await descargarNuevosClientes();
-        // const pedidos = await descargarUltimosPedidos();
-        // console.log(clientes);
-        // console.log(pedidos);
+total = agregarCarrito(200);
+total = agregarCarrito(400);
+total = agregarCarrito(600);
 
-        const resultado = await Promise.all([ descargarNuevosClientes(), descargarUltimosPedidos() ]);
-        console.log(resultado[0]);
-        console.log(resultado[1]); // Con esta solucion se ve el mensaje cuando se ejecute el Promise mas demorado,
-                                // Lo óptimo sería crear otra función app cque ejecute la función de los pedidos
-    }
-    catch(error){
-        console.log(error);
-    }
-}
+console.log(total);
 
-app();
+const totalAPagar = calcularImpuesto(total);
 
-console.log('Este código no se bloquea')
+console.log(`El total a pagar con impuestos es de: $${totalAPagar}`);

@@ -1,19 +1,6 @@
-const usuarioAutenticado = new Promise(  (resolve, reject) => {
-    const auth = true;
+const numero1 = 20;
+const numero2 = "20";
 
-    if(auth){
-        resolve('Usuario autenticado'); //EL PROMISE SE CUMPLE
-    } else {
-        reject('No se pudo iniciar sesión'); //EL PROMISE NO SE CUMPLE
-    }
 
-});
-
-usuarioAutenticado
-    .then( resultado => console.log(resultado))
-    .catch( error => console.log(error))
-
-//En los promises existen 3 valore s
-//Pending : No se ha cumplido pero tampoco se ha rechazado
-//Fullfilled : Ya se cumplió
-//Rejected : Se ha rechazado o no se pudo cumplir
+console.log( parseInt(numero2) ); // parseInt() es una función
+console.log( numero1.toString() ); // .toString() es un método

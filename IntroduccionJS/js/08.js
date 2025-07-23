@@ -1,22 +1,9 @@
+const nombre = 'Juan';
+const email = 'correo@correo.com';
+
+// Concatenación
+console.log("Nombre Cliente: " + nombre + " Email: " + email);
 
 
-//Declaración de una Función
-
-function sumar() {
-    console.log(10 + 10);
-}
-
-sumar();
-
-//Expresión de la funcion
-
-const sumar2 = function() {
-    console.log(3+3);
-}
-
-sumar2();
-
-//IIFE
-// (function(){
-//     console.log('Esto es una función');
-// })();
+// Template Strings - String Literals
+console.log(`Nombre Cliente: ${nombre} Email: ${email}`);

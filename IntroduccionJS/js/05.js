@@ -1,15 +1,14 @@
-const producto = {
-    nombreProducto : "Monitor de 20 pulgadas",
-    precio: 300,
-    disponible: true
-}
+// Números
 
-const medidas = {
-    peso: '1kg',
-    medida: '1m'
-}
+const numero1 = 100;
+const numero2 = 200;
+const numero3 = 9;
+const numero4 = 3;
+const numero5 = -5;
 
-const nuevoProducto = { ...producto, ...medidas};
+console.log(numero1 + numero2);
+console.log(numero2 - numero1);
+console.log(numero2 * numero1);
+console.log(numero2 / numero1);
+console.log(numero3 % numero4);
 
-console.log(producto)
-console.log(nuevoProducto)

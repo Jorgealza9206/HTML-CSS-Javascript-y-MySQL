@@ -1,13 +1,19 @@
+// String o Cadenas de Texto
+
 const tweet = 'Aprendiendo JavaScript con el curso de Desarrollo Web Completo';
-const prod2 = "Monitor HD"
+const producto2 = 'Monitor HD"';
+const nombre = 'Juan Pablo';
+const email = 'correo@correo.com';
 
-console.log(tweet.length)
+// length es para la extension
+console.log(tweet.length);
+console.log(producto2);
 
-//Indexof: Decir en qué posición se encuentra una palabra dentro de un string
-// Cuando no encuentra la palabra devuelve -1
-
+// IndexOf (retorna posición)
 console.log(tweet.indexOf('JavaScript'));
+console.log(producto2.indexOf('Tablet'));
+console.log(email.indexOf('@'));
 
-//includes: Devuelve true o false si encuentra la palabra
+// Includes (retorna true o false)
 console.log(tweet.includes('JavaScript'));
-console.log(tweet.includes('JavaScript', 10)); // Busca a partir de la posición
+console.log(producto2.includes('Tablet'));

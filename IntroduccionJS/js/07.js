@@ -1,45 +1,21 @@
-// Array Methods
+// Orden de las operaciones
 
-const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'];
+let resultado;
 
-const carrito = [
-    { nombre: 'Monitor de 20 pulgadas', precio: 500},
-    { nombre: 'Television de 50 pulgadas', precio: 700},
-    { nombre: 'Tablet', precio: 300},
-    { nombre: 'Audífonos', precio: 200},
-    { nombre: 'Teclado', precio: 50},
-    { nombre: 'Celular', precio: 500},
-    { nombre: 'Bocinas', precio: 300},
-    { nombre: 'Laptop', precio: 800},
-];
+resultado = (20 + 30) * 2;
 
-// forEach
-meses.forEach(function(mes) {
-    if(mes = 'Marzo'){
-        console.log(mes);
-    }
-    
-});
+resultado = ( 600 + 600 ) * .95; 
 
-//Includes
-let resultado = meses.includes('Diciembre')
-
-//Some ideal para arreglo de objetos
-// const resultado2 = carrito.some(function(producto){
-//     return producto.nombre === 'Celular'
-// });
-const resultado2 = carrito.some(producto => producto.nombre === 'Celular');
-
-//Reduce
-// resultado = carrito.reduce(function(total, producto){
-//     return total + producto.precio
-// }, 0);
-
-resultado = carrito.reduce((total, producto) => total + producto.precio, 0);
-
-//Filter
-resultado = carrito.filter(function(producto){
-    return producto.nombre !== 'Celular'
-});
 
 console.log(resultado);
+
+// Incrementos
+
+let puntaje = 10;
+
+// Incremento en 1 ++
+
+puntaje += 10;
+//console.log(puntaje++); // Muestra 20, pero luego incrementa a 21
+//console.log(++puntaje); // Primero incrementa a 21, luego muestra 21
+console.log(puntaje);

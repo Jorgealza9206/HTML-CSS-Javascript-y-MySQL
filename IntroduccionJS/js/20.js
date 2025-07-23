@@ -1,30 +1,26 @@
-async function obtenerEmpleados(){
-    const archivo = 'js/empleados.json';
-    // fetch(archivo)
-    //     .then (resultado => {
-    //         //console.log(resultado);
-    //         return resultado.json();
-    //     })
-    //     .then( datos => {
-    //         // console.log(datos);
 
-    //         const { empleados } = datos;
-
-    //         // console.log(empleados);
-
-    //         empleados.forEach(empleado => {
-    //             console.log(empleado);
-    //             console.log(empleado.id);
-    //             console.log(empleado.nombre);
-    //             console.log(empleado.puesto);
-
-    //             document.querySelector('.contenido').textContent = empleado.nombre;
-    //         });
-    //     })
-
-    const resultado = await fetch(archivo);
-    const datos = await resultado.json();
-    console.log(datos);
+// Métodos de propiedad
+const reproductor = {
+    reproducir : function(id) {
+        console.log(`Reproduciendo Canción con el ID: ${id}`)
+    },
+    pausar: function() {
+        console.log('Pausando...')
+    },
+    crearPlaylist: function(nombre) {
+        console.log(`Creando la playlist: ${nombre}`)
+    },
+    reproducirPlaylist: function(nombre) {
+        console.log(`Reproduciendo la playlist: ${nombre}`)
+    },
 }
 
-obtenerEmpleados();
+reproductor.borrarCancion = function(id) {
+    console.log(`Eliminando la canción: ${id}`)
+}
+
+reproductor.reproducir(3840);
+reproductor.pausar();
+reproductor.borrarCancion(20);
+reproductor.crearPlaylist('Heavy Metal');
+reproductor.reproducirPlaylist('Heavy Metal');
