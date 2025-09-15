@@ -1,4 +1,4 @@
-// "use strict"; // Correr JS en modo estricto
+ "use strict"; // Correr JS en modo estricto
 // Objetos
 const producto = {
     nombreProducto : "Monitor 20 Pulgadas",
@@ -6,14 +6,19 @@ const producto = {
     disponible: true
 }
 
-Object.freeze(producto); // No se puede modificar el objeto
+// Object.freeze(producto); // No se puede modificar el objeto
 
-producto.imagen = 'imagen.jpg'; // No se puede agregar una nueva propiedad
+producto.precio = 'Nuevo precio'; // No se puede agregar una nueva propiedad
+//delete producto.precio; // No se puede eliminar una propiedad
 
-// Object.seal(producto); // .freeze .seal
+console.log(Object.isFrozen(producto)); // Verifica si el objeto esta congelado
 
-// producto.precio = 'NUEVO PRECIO'; 
+Object.seal(producto); // .freeze .seal
 
-// delete producto.precio;
+//console.log(Object.isSealed(producto)); // Verifica si el objeto esta sellado
+
+producto.precio = 'NUEVO PRECIO'; 
+
+//delete producto.precio;
 
 console.log(producto);
