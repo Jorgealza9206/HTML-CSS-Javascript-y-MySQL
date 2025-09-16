@@ -61,6 +61,6 @@ console.table(meses);
 // Rest Operator o Spread Operator
 
 const nuevoArreglo = ['Junio', ...meses]; // Agrega un elemento al inicio del arreglo
-// const nuevoArreglo = [...meses, 'Junio']; // Agrega un elemento al final del arreglo
+const nuevoArreglo2 = [...nuevoArreglo, 'Junio']; // Agrega un elemento al final del arreglo
 // const nuevoArreglo = [...meses.slice(0,2), 'Nuevo Mes', ...meses.slice(2)]; // Agrega un elemento en medio del arreglo
-console.log(nuevoArreglo);
+console.log(nuevoArreglo2);
