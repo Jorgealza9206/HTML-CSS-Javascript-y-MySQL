@@ -13,7 +13,7 @@ const sumar2 = function() {
 }
 sumar2();
 
-//IIFE
+//IIFE: Su función es proteger las variables para que no se combinen con otras variables de otros archivos
 (function() {
     console.log('Esto es una función');
 })();

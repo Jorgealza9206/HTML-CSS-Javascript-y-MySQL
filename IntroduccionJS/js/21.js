@@ -5,7 +5,7 @@ const sumar2 = (n1, n2) => console.log( n1 + n2);
 sumar2(5, 10);
 
 
-const aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`)
+const aprendiendo = tecnologia => console.log(`Aprendiendo ${tecnologia}`) // Si es un solo parametro no se necesitan los parentesis
 
 aprendiendo('JavaScript');
 
@@ -38,7 +38,7 @@ meses.forEach( mes => {
 let resultado;
 
 // Some ideal para arreglo de objetos
-resultado = carrito.some( producto => producto.nombre === 'Celular');
+resultado = carrito.some( producto => producto.nombre === 'Celular'); //No es necesario usar return
 
 // Reduce
 resultado = carrito.reduce( (total, producto) =>  total + producto.precio, 0);

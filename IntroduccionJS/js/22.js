@@ -1,8 +1,8 @@
  
 //  const puntaje = 100;
 
-//  if(puntaje !== 1000) { 
-//     console.log('No es igual')
+//  if(puntaje !== 1000) { // Si es triple igual (===) tambien compara el tipo de dato
+//     console.log('No es igual') 
     
 //  } else {
 //     console.log('Si el puntaje es 1000');
