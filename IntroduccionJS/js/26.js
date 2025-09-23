@@ -6,6 +6,8 @@ const reservacion = {
     pagado: false,
     informacion: function() {
         console.log(`El Cliente ${this.nombre} reservó y su cantidad a pagar es de ${this.total}`);
+        //This hace referencia al objeto que lo contiene
+        //Un arrow function no puede utilizar this, ya que hace referencia al contexto padre (window en este caso)
     }
 }
 
