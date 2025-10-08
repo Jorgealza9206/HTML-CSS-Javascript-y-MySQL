@@ -1,4 +1,4 @@
-const usuarioAutenticado = new Promise( (resolve, reject) => {
+ const usuarioAutenticado = new Promise( (resolve, reject) => {
     const auth = true;
 
     if(auth) {
@@ -7,6 +7,8 @@ const usuarioAutenticado = new Promise( (resolve, reject) => {
         reject('No se pudo iniciar sesión'); // el promise no se cumple
     }
 });
+
+//console.log(usuarioAutenticado);
 
 usuarioAutenticado
     .then( resultado => console.log(resultado))
