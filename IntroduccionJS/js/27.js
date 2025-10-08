@@ -11,9 +11,11 @@ function Cliente(nombre, apellido) {
     this.nombre = nombre;
     this.apellido = apellido;
 }
+    // Crear funciones que solo se utilizan en un objeto en especifico.
 Cliente.prototype.formatearCliente = function() {
     return `El Cliente ${this.nombre} ${this.apellido}`;
 }
+//Prototype es una propiedad que tienen las funciones en JS, que permite agregarle nuevas propiedades y métodos al objeto.
 
 
 function Producto(nombre, precio) {
