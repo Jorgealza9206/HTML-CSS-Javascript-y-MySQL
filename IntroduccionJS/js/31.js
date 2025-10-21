@@ -8,9 +8,9 @@ boton.addEventListener('click', () => {
 
 
 
-if(Notification.permission == 'granted') {
-    new Notification('Esta es una notificación', {
-        icon: 'img/ccj.png',
-        body: 'Código con Juan, los mejores tutoriales'
-    })
-}
+// if(Notification.permission == 'granted') {
+//     new Notification('Esta es una notificación', {
+//         icon: 'img/ccj.png',
+//         body: 'Código con Juan, los mejores tutoriales'
+//     })
+// }
