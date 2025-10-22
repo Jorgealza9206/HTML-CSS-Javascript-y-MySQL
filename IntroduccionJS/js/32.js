@@ -47,3 +47,7 @@ app();
 
 // Por ejemplo, tenemos una función async que no se ha resuelto, entonces mientras resuelve o 
 // hace reject ejecuta el resto del código que haya 
+
+// Esto hace que las dos promises se ejecuten al mismo tiempo 
+
+// Y el resultado se pone como un item del vector, hasta que no se cumpla el promise de mayor tiempo no se resuelve 
