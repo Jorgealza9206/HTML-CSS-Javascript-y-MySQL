@@ -39,3 +39,11 @@ async function app() {
 
 app();
 
+//Async / Await: 
+
+// Async se le asigna a una función en la cual, esta hace un try/catch, en el try pone un promise y
+// se le asigna un await, lo que quiere decir que espera hasta que se resuelva ese promise para
+// ejecutarse sin  que esto perjudique el resto del código después de la función asíndrona. 
+
+// Por ejemplo, tenemos una función async que no se ha resuelto, entonces mientras resuelve o 
+// hace reject ejecuta el resto del código que haya 
