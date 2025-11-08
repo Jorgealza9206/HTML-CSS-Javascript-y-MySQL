@@ -3,7 +3,8 @@ function obtenerEmpleados() {
     const archivo = './js/empleados.json';
 
     fetch(archivo)
-        .then( resultado => console.log(resultado))
+        .then( resultado =>  resultado.json() )
+        .then( datos => console.log(datos) );
 }
 
 
