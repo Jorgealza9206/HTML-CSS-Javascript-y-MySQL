@@ -1,40 +1,41 @@
-console.log('Hola Mundo');
-
 // querySelector
 
 //Podemos seleccionar por clase, id, o cualquier etiqueta HTML
 //Si selecciona por clase usa '.nombre-de-la-clase' y agregamos espacios para seleccionar elementos hijos
 
 const heading = document.querySelector('#heading') // 0 o 1 Elementos //Query Selector selecciona un elemento HTML
-// heading.textContent = 'Nuevo Heading';
-// heading.classList.add('nueva-clase');
+//Utiliza mejor los identificadores en vez de las clases en archivos JS
+heading.textContent = 'Nuevo Heading';
+heading.classList.add('nueva-clase');
 console.log(heading);
 
-// // querySelectorAll
-// //Retorna todos los elementos que concuerdan con la descripción
-// const enlaces = document.querySelectorAll('.navegacion a');
-//  enlaces[0].textContent = 'Nuevo Texto para Enlace';
-//  enlaces[0].classList.add('nueva-clase');
-//  //enlaces[0].classList.remove('navegacion__enlace');
+// querySelectorAll
+//Retorna todos los elementos que concuerdan con la descripción
+const enlaces = document.querySelectorAll('.navegacion a');
+enlaces[0].textContent = 'Nuevo Texto para Enlace'; //Cambia el texto del primer enlace
+enlaces[0].classList.add('nueva-clase'); //Agrega una clase al primer enlace
+// enlaces[0].classList.remove('navegacion__enlace'); //Elimina una clase del primer enlace
 
-// // getElementById
+// getElementById
 
-// // const heading2 = document.getElementById('heading');
-// // console.log(heading2);
+// const heading2 = document.getElementById('heading'); //No es necesario el '#'
+// console.log(heading2);
 
-// //Generar un nuevo enlace o crear un nuevo enlace
-// const nuevoEnlace =document.createElement('A');
+//Generar un nuevo enlace o crear un nuevo enlace
+const nuevoEnlace =document.createElement('A'); //Crear un nuevo elemento HTML
 
-// //Agregar el href
-// nuevoEnlace.href = 'nuevo-enlace.html';
-// //Agregar el texto
-// nuevoEnlace.textContent = 'Tienda Virtual';
-// //Agregar la clase
-// nuevoEnlace.classList.add('navegacion__enlace');
+//Agregar el href
+nuevoEnlace.href = 'nuevo-enlace.html'; //Agrega el atributo href a la etiqueta A
+//Agregar el texto
+nuevoEnlace.textContent = 'Tienda Virtual';
+//Agregar la clase
+nuevoEnlace.classList.add('navegacion__enlace');
 
-// //Agregarlo al documento
-// const navegacion = document.querySelector('.navegacion')
-// navegacion.appendChild(nuevoEnlace);
+console.log(nuevoEnlace);
+
+//Agregarlo al documento
+const navegacion = document.querySelector('.navegacion') //Referencia la clase navegacion
+navegacion.appendChild(nuevoEnlace); //Pone la etiqueta A dentro de la clase navegacion
 
 // console.log(nuevoEnlace);
 
