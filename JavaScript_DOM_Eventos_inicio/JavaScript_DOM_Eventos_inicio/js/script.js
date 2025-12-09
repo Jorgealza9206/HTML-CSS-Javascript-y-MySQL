@@ -63,13 +63,13 @@
 // }
 
 // Seleccionar elementos y asociarles un evento
-const btnEnviar = document.querySelector('.boton--primario');
-btnEnviar.addEventListener('click', function(evento) {
-    console.log(evento);
-    evento.preventDefault(); // Evita la acción por defecto
-    //Validar un formulario
-    console.log('Enviando formulario');
-});
+// const btnEnviar = document.querySelector('.boton--primario');
+// btnEnviar.addEventListener('click', function(evento) {
+//     console.log(evento);
+//     evento.preventDefault(); // Evita la acción por defecto
+//     //Validar un formulario
+//     console.log('Enviando formulario');
+// });
 
 
     
@@ -85,11 +85,15 @@ const datos ={
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
-///const formulario = document.querySelector('.formulario');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
+formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    console.log('Enviando Formulario');
+}); // En este caso siempre debes tener un formulario de tipo submit
 
 function leerTexto(e) {
     datos[e.target.id] = e.target.value; //e.target.id obtiene el id del input al que se le está escribiendo
@@ -98,12 +102,6 @@ function leerTexto(e) {
 
     console.log(datos);
 }
-//El Evento de Submit
-const formulario = document.querySelector('.formulario');
-formulario.addEventListener('submit', function(evento) {
-    evento.preventDefault();
-    console.log('Enviando Formulario');
-});
     //Validar el formulario
 
 //     const {nombre, email, mensaje} = datos;
