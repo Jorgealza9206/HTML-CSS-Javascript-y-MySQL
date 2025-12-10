@@ -90,8 +90,21 @@ const formulario = document.querySelector('.formulario');
 nombre.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
+
+//El Evento Submit
 formulario.addEventListener('submit', function(evento) {
     evento.preventDefault();
+        //Validar el formulario
+
+    const { nombre, email, mensaje } = datos;
+    console.log(nombre);
+    console.log(email);
+    console.log(mensaje);
+    if(nombre === '' || email === '' || mensaje === '') {
+        mostrarAlerta('Todos los campos son obligatorios');
+        // console.log('Todos los campos son obligatorios');
+        return; //Corta la ejecución del código dentro de la función
+    }
     console.log('Enviando Formulario');
 }); // En este caso siempre debes tener un formulario de tipo submit
 
@@ -101,20 +114,13 @@ function leerTexto(e) {
     // console.log(e.target.value);
 
     console.log(datos);
-}
-    //Validar el formulario
+};
 
-//     const {nombre, email, mensaje} = datos;
 
-//     if(nombre === '' || email === '' || mensaje === '') {
-//         mostrarAlerta('Todos los campos son obligatorios','error');
-//         //console.log('Todos los campos son obligatorios');
-//         return; //Corta la ejecución del código
-//     }
 
-//     //Enviar el formulario
+    //Enviar el formulario
 
-//     mostrarAlerta('Enviado Correctamente');
+
 // });
 
 // function leerTexto(e) {
@@ -124,9 +130,10 @@ function leerTexto(e) {
 //     //console.log(datos);
 // }
 
-// function mostrarAlerta(mensaje, error=null) {
-//     const alerta = document.createElement('P'); //Crea un párrafo HTML
-//     alerta.textContent = mensaje;
+function mostrarAlerta(mensaje) {
+    const alerta = document.createElement('P'); //Crea un párrafo HTML
+    alerta.textContent = mensaje;
+    formulario.appendChild(alerta);
     
 //     if(error) {
 //         alerta.classList.add('error');
@@ -140,4 +147,4 @@ function leerTexto(e) {
 //         setTimeout(() => {
 //             alerta.remove();
 //         }, 5000);
-// }
+}
